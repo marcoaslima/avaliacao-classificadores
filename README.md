@@ -2,8 +2,8 @@
 
 "Desenvolver duas aplicações que utilizem a Biblioteca Weka (código em Java) e as duas bases desenvolvidas para o Primeiro Trabalho Semestral, sendo uma aplicação para cada base. Nessas aplicações, deverá ser avaliado experimentalmente o desempenho de dois algoritmos para a tarefa de classificar exemplos dos problemas definidos em ambas as bases."
 
-Linguagem utilizada: Java (1.8)
-Bibliotecas utilizadas: Wekka (1.6), JTattoo (1.6) 
+<p>Linguagem utilizada: Java (1.8)</p>
+<p>Bibliotecas utilizadas: Wekka (1.6), JTattoo (1.6)</p> 
 
 Os algorítmos escolhidos
  <ul>
@@ -41,3 +41,6 @@ Avaliador
 <h3>Documentos da Avaliação:</h3>
 <p>Base de dados</p>
 <p>Relatórios</p>
+
+<hr>
+<a class="btn btn-default" href="http://www.megari.com.br/" target="_blank">Participe deste projeto!</a>
