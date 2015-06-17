@@ -32,7 +32,7 @@ Avaliador
 
 <h3>Sponsor:</h3>
 <p>Nome:<a href="http://www.villani.eti.br" target="_blank">Prof Ms Leonardo Villani</a></p>
-<p>Instituição: <a href="http://www.fatecpg.com.br">FATEC de Praia Grande</a></p>
+<p>Instituição: <a href="http://www.fatecpg.com.br" target="_blank">FATEC de Praia Grande</a></p>
 
 <h3>Colaboração:</h3>
 <p>Nome:<a href="https://github.com/valmirsl" target="_blank">Valmir Santos da Silva</a></p>
