@@ -7,11 +7,11 @@ Bibliotecas utilizadas: Wekka (1.6), JTattoo (1.6)
 
 Os algorítmos escolhidos
  <ul>
-  <li>J48<li>
-  <li>KNN<li>
-  <li>IB1<li>
-  <li>ID3<li>
-  <li>NaiveBayes<li>
+  <li>J48</li>
+  <li>KNN</li>
+  <li>IB1</li>
+  <li>ID3</li>
+  <li>NaiveBayes</li>
  </ul>
 Avaliador
   Evaluation
