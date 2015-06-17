@@ -27,15 +27,16 @@ Avaliador
 <p>Licensa: <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL V3</a></p>
 
 <h3>Desenvolvedores:</h3>
-<p><a href="https://github.com/marckdx">Marco Aurélio Lima</a></p>
-<p><a href="https://github.com/renanps">Renan Paulino Sanchez</a></p>
+<p>Nome: <a href="https://github.com/marckdx" target="_blank">Marco Aurélio Lima</a></p>
+<p>Nome: <a href="https://github.com/renanps" target="_blank">Renan Paulino Sanchez</a></p>
 
 <h3>Sponsor:</h3>
-<p><a href="http://www.villani.eti.br">Prof Ms Leonardo Villani</a></p>
+<p>Nome:<a href="http://www.villani.eti.br" target="_blank">Prof Ms Leonardo Villani</a></p>
+<p>Instituição: <a href="http://www.fatecpg.com.br">FATEC de Praia Grande</a></p>
 
 <h3>Colaboração:</h3>
-<p><a href="">Valmir Santos da Silva</a></p>
-<p><a href="">Stevan Mosquetti</a></p>
+<p>Nome:<a href="https://github.com/valmirsl" target="_blank">Valmir Santos da Silva</a></p>
+<p>Nome:<a href="" target="_blank">Stevan Mosquetti</a></p>
 
 <h3>Documentos da Avaliação:</h3>
 <p>Base de dados</p>
