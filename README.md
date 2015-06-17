@@ -14,4 +14,10 @@ Os algorítmos escolhidos
   <li>NaiveBayes</li>
  </ul>
 Avaliador
-  Evaluation
+  <ul>
+   <li>Evaluation</li>
+  </ul>
+
+#Sobre o sistema
+
+Versão: 0.8
