@@ -24,7 +24,7 @@ Avaliador
 <p>Versão: 0.8</p>
 <p>Site: <a href="http://mtcs.megari.com.br">mtcs.megari.com.br</a></p>
 <p>Suporte: <a href="mailto:mtcs@megari.com.br">mtcs@megari.com.br</a></p>
-<p>Licensa: GNU GPL V3</p>
+<p>Licensa: <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL V3</a></p>
 
 <h3>Desenvolvedores:</h3>
 <p><a href="https://github.com/marckdx">Marco Aurélio Lima</a></p>
