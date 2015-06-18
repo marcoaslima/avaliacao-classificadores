@@ -22,7 +22,7 @@ Avaliador
   
 #Sobre o sistema
 
-<p>Nome: MTCS</p>
+<p>Nome: MTCS (UE)</p>
 <p>Versão: 0.8</p>
 <p>Site: <a href="http://mtcs.megari.com.br">mtcs.megari.com.br</a></p>
 <p>Suporte: <a href="mailto:mtcs@megari.com.br">mtcs@megari.com.br</a></p>
