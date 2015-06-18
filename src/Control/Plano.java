@@ -19,8 +19,10 @@ public class Plano {
     public boolean J48 = false;
     public boolean Tree = false;
 
-    public Boolean eHoldOut;
-    public Boolean eLeaveOnOut;
+    public Boolean eHoldOut = false;
+    public Boolean eLeaveOnOut = true;
+    
+    public Boolean exibeDetalhes = false;
     
     public Plano(String nomeDoPlano) {
         this.nomeDoPlano = nomeDoPlano;

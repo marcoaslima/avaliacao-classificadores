@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package View;
 
 import Control.Arquivo;
+import Control.Classificador;
 import Control.Console;
+import Control.Mensagem;
 import Control.Plano;
 import java.util.ArrayList;
 
@@ -16,10 +17,11 @@ import java.util.ArrayList;
  * @author Marco
  */
 public class formMain extends javax.swing.JFrame {
+    
     private Arquivo arquivo;
     private Console console;
     public ArrayList<Plano> planos = new ArrayList<>();
-    
+
     /**
      * Creates new form formMain
      */
@@ -65,7 +67,7 @@ public class formMain extends javax.swing.JFrame {
         jMenu10 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
+        menuSair = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -86,7 +88,7 @@ public class formMain extends javax.swing.JFrame {
         jMenu8.setText("jMenu8");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Megari Test Classifier Suite");
+        setTitle("MTCS");
         setResizable(false);
 
         jToolBar1.setRollover(true);
@@ -241,9 +243,14 @@ public class formMain extends javax.swing.JFrame {
         jMenuItem8.setText("Fechar Tudo");
         jMenu1.add(jMenuItem8);
 
-        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem7.setText("Sair");
-        jMenu1.add(jMenuItem7);
+        menuSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_MASK));
+        menuSair.setText("Sair");
+        menuSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSairActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuSair);
 
         jMenuBar1.add(jMenu1);
 
@@ -304,6 +311,11 @@ public class formMain extends javax.swing.JFrame {
 
         jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem9.setText("Sobre");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem9);
 
         jMenuBar1.add(jMenu7);
@@ -339,16 +351,30 @@ public class formMain extends javax.swing.JFrame {
     }//GEN-LAST:event_menuOptionActionPerformed
 
     private void btnAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirActionPerformed
-       this.arquivo = new Arquivo();
-       arquivo.importar();
-       txtConteudoBase.setText(arquivo.leArquivo(arquivo.arquivo));
-       txtConsole.append(console.BASE_SELECIONADA);
+        this.arquivo = new Arquivo();
+        arquivo.importar();
+        txtConteudoBase.setText(arquivo.leArquivo(arquivo.arquivo));
+        txtConsole.append(console.BASE_SELECIONADA);
     }//GEN-LAST:event_btnAbrirActionPerformed
 
     private void btnExecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecutarActionPerformed
-       Plano plano = planos.get(cboPlano.getSelectedIndex());
-       
+        Plano plano = planos.get(cboPlano.getSelectedIndex());
+        Classificador classi = new Classificador();
+        classi.classificar(plano, arquivo);
+        txtConsole.append(classi.resultadoToString());
     }//GEN-LAST:event_btnExecutarActionPerformed
+
+    private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
+        if (Mensagem.questao("Deseja realmente sair?", "MTCS - SAIR")) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_menuSairActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        formAbout sobre = new formAbout(this);
+        sobre.setLocationRelativeTo(null);
+        sobre.setVisible(true);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -410,7 +436,6 @@ public class formMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
@@ -429,25 +454,40 @@ public class formMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuDefinirPlano;
     private javax.swing.JMenuItem menuExecutar;
     private javax.swing.JButton menuOption;
+    private javax.swing.JMenuItem menuSair;
     private javax.swing.JTextArea txtConsole;
     private javax.swing.JTextArea txtConteudoBase;
     // End of variables declaration//GEN-END:variables
 
     private void initConfigs() {
-        Plano plano = new Plano("Default");
-        plano.setKNN(true);
-        plano.setIBK(true);
-        this.planos.add(plano);
         
+        Plano todos = new Plano("Todos");
+        todos.setKNN(true);
+        todos.setIBK(true);
+        todos.setJ48(true);
+        todos.setNaive(true);
+        todos.setTree(true);
+        this.planos.add(todos);
+        
+        Plano continuo = new Plano("Contínuo");
+        continuo.setKNN(true);
+        continuo.setIBK(true);
+        this.planos.add(continuo);
+        
+        Plano nominal = new Plano("Nominal");
+        nominal.setTree(true);
+        nominal.setNaive(true);
+        this.planos.add(nominal);
+        
+        cboPlano.removeAllItems();
         for (Plano plano1 : planos) {
-            cboPlano.removeAllItems();
+            
             cboPlano.addItem(plano1.getNomeDoPlano());
         }
     }
     
-    public void adicionaPlano(Plano plano){
+    public void adicionaPlano(Plano plano) {
         this.planos.add(plano);
     }
-    
     
 }

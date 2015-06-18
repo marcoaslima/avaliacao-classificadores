@@ -6,6 +6,7 @@
 package Control;
 
 import View.formLoad;
+import View.formMain;
 import javax.swing.UIManager;
 
 /**
@@ -19,14 +20,19 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
         } catch (Exception ex) {
         }
 
-        formLoad load = new formLoad();
+       /* formLoad load = new formLoad();
         load.setLocationRelativeTo(null);
         load.setVisible(true);
-        load.load();
+        load.load();*/
+        
+        formMain main = new formMain();
+        main.setLocationRelativeTo(null);
+        main.setVisible(true);
     }
 
 }
