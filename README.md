@@ -2,22 +2,24 @@
 
 "Desenvolver duas aplicações que utilizem a Biblioteca Weka (código em Java) e as duas bases desenvolvidas para o Primeiro Trabalho Semestral, sendo uma aplicação para cada base. Nessas aplicações, deverá ser avaliado experimentalmente o desempenho de dois algoritmos para a tarefa de classificar exemplos dos problemas definidos em ambas as bases."
 
+<p>Nota: Por motivos de desenvolvimento, distribuição e facilitação ao usuário as aplicações foram unificadas. Tornando assim flexível e adaptativa as bases fornecidas.</p>
+
 <p>Linguagem utilizada: Java (1.8)</p>
 <p>Bibliotecas utilizadas: Wekka (1.6), JTattoo (1.6)</p> 
 
 Os algorítmos escolhidos
  <ul>
-  <li>J48</li>
-  <li>KNN</li>
-  <li>IB1</li>
-  <li>ID3</li>
-  <li>NaiveBayes</li>
+  <li>J48 : Árvore de Decisão - dados nominais</li>
+  <li>KNN : k-Vizinhos mais próximos - dados contínuos</li>
+  <li>IB1 : Vizinho mais próximo - dados contínuos</li>
+  <li>ID3 : Árvore de Decisão - dados nominais</li>
+  <li>NaiveBayes : NaiveBayes - dados nominais</li>
  </ul>
 Avaliador
   <ul>
    <li>Evaluation</li>
   </ul>
-
+  
 #Sobre o sistema
 
 <p>Nome: MTCS</p>
