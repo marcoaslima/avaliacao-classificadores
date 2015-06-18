@@ -2,17 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/View/formMain.java</file>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/View/formOption.java</file>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/View/formAbout.java</file>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/Control/Console.java</file>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/Control/Mensagem.java</file>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/View/formError.java</file>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/Control/Arquivo.java</file>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/Control/Classificador.java</file>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/View/formLoad.java</file>
-            <file>file:/E:/Documentos/NetBeansProjects/TestClassifier/src/Control/Plano.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
