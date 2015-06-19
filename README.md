@@ -41,7 +41,12 @@ Avaliador
 <p>Nome:<a href="" target="_blank">Stevan Mosquetti</a></p>
 
 <h3>Documentos da Avaliação:</h3>
-<p>Base de dados<a href="">Nominal(.arff)</a>&nbsp;<a href="">Contínua(.arff)</a>&nbsp;<a href="">Todas(.mtcs)</a> </p>
+<p>Base de dados:
+  <ul>
+  <li><a href="">Nominal(.arff)</a></li>
+  <li><a href="">Contínua(.arff)</a></li>
+  <li><a href="">Todas(.mtcs)</a> </p></li>
+  </ul>
 <p>Relatórios</p>
 
 <hr>
