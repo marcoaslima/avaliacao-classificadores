@@ -22,12 +22,12 @@ Avaliador
   
 #Sobre o sistema
 <img src="http://mtcsapp.megari.com.br/icone.png"/>
-<p>Nome: MTCS (UE)</p>
-<p>Versão: 0.8</p>
-<p>Site: <a href="http://mtcsapp.megari.com.br/">mtcsapp.megari.com.br/</a></p>
-<p>Suporte: <a href="mailto:mtcs@megari.com.br">mtcs@megari.com.br</a></p>
-<p>Licensa: <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL V3</a></p>
-<p>Documentação: <a href="http://mtcsapp.megari.com.br/docs/jdoc/" target="_blank"> clique aqui</p>
+* Nome: MTCS (UE)
+* Versão: 0.8
+* Site: <a href="http://mtcsapp.megari.com.br/">mtcsapp.megari.com.br/</a
+* Suporte: <a href="mailto:mtcs@megari.com.br">mtcs@megari.com.br</a>
+* Licensa: <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL V3</a>
+* Documentação: <a href="http://mtcsapp.megari.com.br/docs/jdoc/" target="_blank"> clique aqui
 
 <h3>Instalação:</h3>
  <ul>
