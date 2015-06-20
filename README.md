@@ -51,9 +51,9 @@ Avaliador
 <h3>Documentos da Avaliação:</h3>
 <p>Base de dados:
   <ul>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-automoveis.arff">Nominal(.arff)</a></li>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-smartphones.arff">Contínua(.arff)</a></li>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-completa.mtcs">Todas(.mtcs)</a> </p></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/automoveis.arff">Nominal(.arff)</a></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/smartphones.arff">Contínua(.arff)</a></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-latest.mtcs">Todas(.mtcs)</a> </p></li>
   </ul>
 <p>Relatórios</p>
 
