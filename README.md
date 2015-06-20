@@ -32,7 +32,7 @@ Avaliador
 <h3>Instalação:</h3>
  <ul>
   <li><a href="http://mtcsapp.megari.com.br/latest/mtcs-latest.zip">Baixe o .zip aqui</a></li>
-  <li>Descompacte</p></li>
+  <li>Descompacte</li>
   <li>Execute <i>mtcs.jar¹</i></li>
  </ul>
  
