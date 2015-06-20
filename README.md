@@ -21,7 +21,7 @@ Avaliador
   </ul>
   
 #Sobre o sistema
-<img src="http://mtcsapp.megari.com.br/icone.png"/>
+
 * Nome: MTCS (UE)
 * Versão: 0.8
 * Site: <a href="http://mtcsapp.megari.com.br/">mtcsapp.megari.com.br/</a>
@@ -36,6 +36,14 @@ Avaliador
   <li><p>Execute <i>mtcs.jar¹</i></p></li>
  </ul>
  
+ <h3>Classificando:</h3>
+ 
+* Execute o sistema
+* Vá em "Selecionar Base"
+* Busque um arquivo .arff
+* Vá em "Configurações > Plano de testes"
+* Selecione os testes que deseja efetuar
+* Clique em "Executar"
 
 <h3>Desenvolvedores:</h3>
 <p>Nome: <a href="https://github.com/marckdx" target="_blank">Marco Aurélio Lima</a></p>
