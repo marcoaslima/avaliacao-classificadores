@@ -21,7 +21,7 @@ Avaliador
   </ul>
   
 #Sobre o sistema
-<img src="http://mtcsapp.megari.com.br/Capturar.PNG" />
+<img src="http://mtcsapp.megari.com.br/Capturar.PNG" style="height: 200px;"/>
 <p>Nome: MTCS (UE)</p>
 <p>Versão: 0.8</p>
 <p>Site: <a href="http://mtcsapp.megari.com.br/">mtcsapp.megari.com.br/</a></p>
