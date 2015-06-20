@@ -24,9 +24,17 @@ Avaliador
 
 <p>Nome: MTCS (UE)</p>
 <p>Versão: 0.8</p>
-<p>Site: <a href="http://mtcs.megari.com.br">mtcs.megari.com.br</a></p>
+<p>Site: <a href="http://mtcsapp.megari.com.br/">mtcsapp.megari.com.br/</a></p>
 <p>Suporte: <a href="mailto:mtcs@megari.com.br">mtcs@megari.com.br</a></p>
 <p>Licensa: <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL V3</a></p>
+
+<h3>Instalação:</h3>
+ <ul>
+  <li><p><a href="">Baixe o .zip aqui</a></p></li>
+  <li><p>Descompacte</p></li>
+  <li><p>Execute <i>mtcs.jar¹</i></p></li>
+ </ul>
+ 
 
 <h3>Desenvolvedores:</h3>
 <p>Nome: <a href="https://github.com/marckdx" target="_blank">Marco Aurélio Lima</a></p>
@@ -43,11 +51,14 @@ Avaliador
 <h3>Documentos da Avaliação:</h3>
 <p>Base de dados:
   <ul>
-  <li><a href="">Nominal(.arff)</a></li>
-  <li><a href="">Contínua(.arff)</a></li>
-  <li><a href="">Todas(.mtcs)</a> </p></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-automoveis.arff">Nominal(.arff)</a></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-smartphones.arff">Contínua(.arff)</a></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-completa.mtcs">Todas(.mtcs)</a> </p></li>
   </ul>
 <p>Relatórios</p>
 
+(¹) É necessário ter pelo menos o JDK 7  ou OpenJDK 6
+
 <hr>
-<a class="btn btn-default" href="http://www.megari.com.br/" target="_blank">Participe deste projeto!</a>
+<a class="btn btn-default" href="http://mtcsapp.megari.com.br/" target="_blank">Participe deste projeto!</a>
+
