@@ -27,10 +27,11 @@ Avaliador
 <p>Site: <a href="http://mtcsapp.megari.com.br/">mtcsapp.megari.com.br/</a></p>
 <p>Suporte: <a href="mailto:mtcs@megari.com.br">mtcs@megari.com.br</a></p>
 <p>Licensa: <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL V3</a></p>
+<p>Documentação: <a href="http://mtcsapp.megari.com.br/docs/jdoc/" target="_blank"> clique aqui</p>
 
 <h3>Instalação:</h3>
  <ul>
-  <li><p><a href="">Baixe o .zip aqui</a></p></li>
+  <li><p><a href="http://mtcsapp.megari.com.br/latest/mtcs-latest.zip">Baixe o .zip aqui</a></p></li>
   <li><p>Descompacte</p></li>
   <li><p>Execute <i>mtcs.jar¹</i></p></li>
  </ul>
@@ -51,12 +52,17 @@ Avaliador
 <h3>Documentos da Avaliação:</h3>
 <p>Base de dados:
   <ul>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/automoveis.arff">Nominal(.arff)</a></li>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/smartphones.arff">Contínua(.arff)</a></li>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-latest.mtcs">Todas(.mtcs)</a> </p></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/automoveis.arff" target="_blank">Nominal(.arff)</a></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/smartphones.arff" target="_blank">Contínua(.arff)</a></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-latest.mtcs" target="_blank">Todas(.mtcs)</a> </p></li>
   </ul>
 <p>Relatórios</p>
+<ul>
+  <li><a href="http://mtcsapp.megari.com.br/docs/reports/automoveis.pdf" target="_blank">Nominal(.arff)</a></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/reports/smartphones.pdf" target="_blank">Contínua(.arff)</a></li>
+</ul>
 
+<h3>Observações:</h3>
 (¹) É necessário ter pelo menos o JDK 7  ou OpenJDK 6
 
 <hr>
