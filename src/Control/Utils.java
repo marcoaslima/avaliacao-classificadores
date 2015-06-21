@@ -5,7 +5,10 @@
  */
 package Control;
 
+import java.awt.Image;
 import java.text.DecimalFormat;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  *
@@ -20,5 +23,11 @@ public class Utils {
     
     public static String porcentagem(double valor){
         return paraDuasCasas(valor *100) + "%";
+    }
+    
+    public static void setImagem(JFrame frame){
+        java.net.URL url = ClassLoader.getSystemResource("\\Assets\\icone.png");
+        ImageIcon icon = new ImageIcon(url);
+        frame.setIconImage(icon.getImage());
     }
 }

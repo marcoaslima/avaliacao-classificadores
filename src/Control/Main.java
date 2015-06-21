@@ -20,19 +20,20 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-            //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            //UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
         } catch (Exception ex) {
         }
 
-       /* formLoad load = new formLoad();
+        formLoad load = new formLoad();
         load.setLocationRelativeTo(null);
         load.setVisible(true);
-        load.load();*/
+        Utils.setImagem(load);
+        load.load();
         
-        formMain main = new formMain();
-        main.setLocationRelativeTo(null);
-        main.setVisible(true);
+//        formMain main = new formMain();
+//        main.setLocationRelativeTo(null);
+//        main.setVisible(true);
     }
 
 }

@@ -29,6 +29,14 @@ public class Classificador {
 
     ArrayList<Resultado> resultados = new ArrayList<>();
 
+    public ArrayList<Resultado> getResultados() {
+        return resultados;
+    }
+
+    public void setResultados(ArrayList<Resultado> resultados) {
+        this.resultados = resultados;
+    }
+
     public ArrayList<Resultado> classificar(Plano plano, Arquivo arq) {
         try {
             FileReader leitor = new FileReader(arq.arquivo);
