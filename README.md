@@ -6,6 +6,7 @@
 
 <p>Linguagem utilizada: Java (1.8)</p>
 <p>Bibliotecas utilizadas: Wekka (1.6), JTattoo (1.6) e JFreeChart (1.0.1)</p> 
+<p>Ferramentas utilizadas: NetBeans IDE (8.0), Visual Studio Code (0.1.0) e GIMP (2.8.14)</p>
 
 Os algorítmos escolhidos
  <ul>
