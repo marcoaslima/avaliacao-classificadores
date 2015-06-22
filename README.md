@@ -62,7 +62,7 @@ Avaliador
   <ul>
   <li><a href="http://mtcsapp.megari.com.br/docs/test/automoveis.arff" target="_blank">Nominal(.arff)</a></li>
   <li><a href="http://mtcsapp.megari.com.br/docs/test/smartphones.arff" target="_blank">Contínua(.arff)</a></li>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-latest.mtcs" target="_blank">Todas(.mtcs)</a> </p></li>
+  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-latest.mtcs" target="_blank">Todas(.mtcs)²</a> </p></li>
   </ul>
 <p>Relatórios</p>
 <ul>
@@ -72,7 +72,7 @@ Avaliador
 
 <h3>Observações:</h3>
 (¹) É necessário ter pelo menos o JDK 7  ou OpenJDK 6
-
+(²) Formato suportado apenas pelas versões 0.8.2 ou superior do MTCS
 <hr>
 <a class="btn btn-default" href="https://drive.google.com/folderview?id=0B4rPJDhCXbQ7fkVDOWZpOVNCcEM0cjRVUWxhTmhJV1FxRzQxb0NLNGkteEh1X3ZCV0JpTTA&usp=sharing" target="_blank">Nosso Drive</a>
 
