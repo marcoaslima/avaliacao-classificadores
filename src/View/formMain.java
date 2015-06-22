@@ -8,19 +8,23 @@ package View;
 import Control.Arquivo;
 import Control.Classificador;
 import Control.Console;
+import Control.Grafico;
 import Control.Mensagem;
 import Control.Plano;
 import Control.Resultado;
 import Control.Utils;
+import com.sun.imageio.plugins.jpeg.JPEG;
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.util.ArrayList;
 import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartFrame;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
-import org.jfree.data.general.Dataset;
 
 /**
  *
@@ -63,7 +67,7 @@ public class formMain extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JToolBar.Separator();
         menuOption = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        tbpRelatorio = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -72,15 +76,13 @@ public class formMain extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         txtConsole = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
         pnlGrafico = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        pnlAcuracia = new javax.swing.JPanel();
+        pnlTaxaErro = new javax.swing.JPanel();
+        pnlRevocacao = new javax.swing.JPanel();
+        pnlPrecisao = new javax.swing.JPanel();
         btnGerarGraficos = new javax.swing.JButton();
+        btnExibirVencedor = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
@@ -114,7 +116,7 @@ public class formMain extends javax.swing.JFrame {
         jMenuItem7.setText("jMenuItem7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MTCS");
+        setTitle("MTCS - Beta");
         setResizable(false);
 
         jToolBar1.setRollover(true);
@@ -185,10 +187,10 @@ public class formMain extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 503, Short.MAX_VALUE)
+            .addGap(0, 528, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Início", jPanel1);
+        tbpRelatorio.addTab("Início", jPanel1);
 
         txtConteudoBase.setColumns(20);
         txtConteudoBase.setRows(5);
@@ -207,11 +209,11 @@ public class formMain extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Editor", jPanel2);
+        tbpRelatorio.addTab("Editor", jPanel2);
 
         txtConsole.setEditable(false);
         txtConsole.setBackground(new java.awt.Color(0, 0, 0));
@@ -228,97 +230,24 @@ public class formMain extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Console", jPanel4);
-
-        jButton2.setText("Imprimir");
+        tbpRelatorio.addTab("Console", jPanel4);
 
         pnlGrafico.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Acurácia"));
+        pnlAcuracia.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        pnlAcuracia.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 308, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 189, Short.MAX_VALUE)
-        );
+        pnlTaxaErro.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        pnlTaxaErro.setLayout(new java.awt.BorderLayout());
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Taxa de Erro"));
+        pnlRevocacao.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        pnlRevocacao.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 332, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 189, Short.MAX_VALUE)
-        );
-
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder("Revocação"));
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 189, Short.MAX_VALUE)
-        );
-
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Precisão"));
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 189, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 19, Short.MAX_VALUE))
-        );
-
-        jPanel6Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPanel10, jPanel7, jPanel8, jPanel9});
+        pnlPrecisao.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        pnlPrecisao.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout pnlGraficoLayout = new javax.swing.GroupLayout(pnlGrafico);
         pnlGrafico.setLayout(pnlGraficoLayout);
@@ -326,22 +255,47 @@ public class formMain extends javax.swing.JFrame {
             pnlGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlGraficoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pnlGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlAcuracia, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlRevocacao, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addGroup(pnlGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlTaxaErro, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlPrecisao, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20))
         );
+
+        pnlGraficoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {pnlAcuracia, pnlPrecisao, pnlRevocacao, pnlTaxaErro});
+
         pnlGraficoLayout.setVerticalGroup(
             pnlGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlGraficoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pnlGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlAcuracia, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlTaxaErro, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlRevocacao, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlPrecisao, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton4.setText("Opções");
+        pnlGraficoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {pnlAcuracia, pnlPrecisao, pnlRevocacao, pnlTaxaErro});
 
         btnGerarGraficos.setText("Gerar");
+        btnGerarGraficos.setEnabled(false);
         btnGerarGraficos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGerarGraficosActionPerformed(evt);
+            }
+        });
+
+        btnExibirVencedor.setText("Vencedor");
+        btnExibirVencedor.setEnabled(false);
+        btnExibirVencedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExibirVencedorActionPerformed(evt);
             }
         });
 
@@ -351,11 +305,9 @@ public class formMain extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnGerarGraficos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jButton4))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnExibirVencedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGerarGraficos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(pnlGrafico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -365,17 +317,16 @@ public class formMain extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, 506, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(btnGerarGraficos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnExibirVencedor)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Relatório", jPanel3);
+        tbpRelatorio.addTab("Relatório", jPanel3);
 
         jMenu1.setText("Arquivo");
 
@@ -510,7 +461,7 @@ public class formMain extends javax.swing.JFrame {
             .addComponent(jToolBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(tbpRelatorio)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -518,7 +469,7 @@ public class formMain extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1)
+                .addComponent(tbpRelatorio)
                 .addContainerGap())
         );
 
@@ -545,6 +496,14 @@ public class formMain extends javax.swing.JFrame {
         classi.classificar(plano, arquivo);
         this.resultados = classi.getResultados();
         txtConsole.append(classi.resultadoToString());
+        if (classi.getResultados().size() > 0) {
+            Resultado vencedor = Classificador.getVencedor(resultados);
+            Mensagem.erro("O vencedor foi " + vencedor.nome + " com " + (Utils.paraDuasCasas(vencedor.pontuacao * 100)) + "% de aproveitamento", "Resultado");
+            geraGraficos();
+            tbpRelatorio.setSelectedIndex(3);
+        }
+        btnGerarGraficos.setEnabled(true);
+        btnExibirVencedor.setEnabled(true);
     }//GEN-LAST:event_btnExecutarActionPerformed
 
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
@@ -566,22 +525,14 @@ public class formMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void btnGerarGraficosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarGraficosActionPerformed
-
-        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-
-        for (Resultado resultado : this.resultados) {
-            dataset.setValue(resultado.taxaAcerto, "Marks", resultado.nome);
-        }
-
-        JFreeChart chart = ChartFactory.createBarChart("Acurácia", "Student Name", "Marks", dataset, PlotOrientation.HORIZONTAL, false, true, false);
-        CategoryPlot p = chart.getCategoryPlot();
-
-        p.setRangeGridlinePaint(Color.LIGHT_GRAY);
-        ChartFrame frame = new ChartFrame("Titulo", chart);
-
-        frame.setVisible(
-                true);
+        geraGraficos();
     }//GEN-LAST:event_btnGerarGraficosActionPerformed
+
+    private void btnExibirVencedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExibirVencedorActionPerformed
+        Resultado vencedor = Classificador.getVencedor(resultados);
+        Mensagem.erro("O vencedor foi " + vencedor.nome + " com " + (Utils.paraDuasCasas(vencedor.pontuacao * 100)) + "% de aproveitamento", "Resultado");
+
+    }//GEN-LAST:event_btnExibirVencedorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -626,13 +577,12 @@ public class formMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbrir;
     private javax.swing.JButton btnExecutar;
+    private javax.swing.JButton btnExibirVencedor;
     private javax.swing.JButton btnGerarGraficos;
     private javax.swing.JComboBox cboPlano;
     private org.jfree.chart.axis.DateAxis dateAxis1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
@@ -658,14 +608,9 @@ public class formMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem3;
@@ -673,13 +618,17 @@ public class formMain extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar.Separator jSeparator2;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JMenuItem menuDefinirPlano;
     private javax.swing.JMenuItem menuExecutar;
     private javax.swing.JButton menuOption;
     private javax.swing.JMenuItem menuSair;
+    private javax.swing.JPanel pnlAcuracia;
     private javax.swing.JPanel pnlGrafico;
+    private javax.swing.JPanel pnlPrecisao;
+    private javax.swing.JPanel pnlRevocacao;
+    private javax.swing.JPanel pnlTaxaErro;
+    private javax.swing.JTabbedPane tbpRelatorio;
     private javax.swing.JTextArea txtConsole;
     private javax.swing.JTextArea txtConteudoBase;
     // End of variables declaration//GEN-END:variables
@@ -713,6 +662,13 @@ public class formMain extends javax.swing.JFrame {
 
     public void adicionaPlano(Plano plano) {
         this.planos.add(plano);
+    }
+
+    private void geraGraficos() {
+        Grafico.criaAcuracia(resultados, pnlAcuracia);
+        Grafico.criaTaxaErro(resultados, pnlTaxaErro);
+        Grafico.criaPrecisao(resultados, pnlPrecisao);
+        Grafico.criaRevocacao(resultados, pnlRevocacao);
     }
 
 }

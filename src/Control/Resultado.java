@@ -19,7 +19,15 @@ public class Resultado {
     public double taxaAcerto;
     public double precisao;
     public double revocacao;
+    
+    public double pontuacao;
 
+    public Resultado(String nome, double pontuacao) {
+        this.nome = nome;
+        this.pontuacao = pontuacao;
+    }
+
+    
     public Resultado(String nome, String matriz, String detalhes) {
         this.nome = nome;
         this.matriz = matriz;
@@ -42,4 +50,13 @@ public class Resultado {
         this.precisao = precisionToDouble;
     }
 
+    public double getPontuacao() {
+        return pontuacao;
+    }
+
+    public void setPontuacao(double pontuacao) {
+        this.pontuacao = pontuacao;
+    }
+
+    
 }

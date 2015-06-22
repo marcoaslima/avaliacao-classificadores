@@ -60,7 +60,7 @@ public class Classificador {
                     IB1 vizinho = new IB1();
                     vizinho.buildClassifier(baseTeste);
                     avaliacao.crossValidateModel(vizinho, baseTeste, (plano.eHoldOut) ? 4 : baseTeste.numInstances(), rand);
-                    Resultado resultado = new Resultado("Vizinho Mais Próximo", avaliacao.toMatrixString("Algorítmo Vizinho Mais Próximo - Matriz de Confusão"), avaliacao.toClassDetailsString("kNN"));
+                    Resultado resultado = new Resultado("NN", avaliacao.toMatrixString("Algorítmo Vizinho Mais Próximo - Matriz de Confusão"), avaliacao.toClassDetailsString("kNN"));
                     resultado.setTaxaErro(avaliacao.errorRate());
                     resultado.setTaxaAcerto(1 - avaliacao.errorRate());
                     resultado.setRevocacao(recallToDouble(avaliacao, baseTeste));
@@ -87,7 +87,7 @@ public class Classificador {
             }
             if (plano.KNN) {
                 try {
-                    IBk knn = new IBk();
+                    IBk knn = new IBk(3);
                     knn.buildClassifier(baseTeste);
                     avaliacao.crossValidateModel(knn, baseTeste, (plano.eHoldOut) ? 4 : baseTeste.numInstances(), rand);
                     Resultado resultado = new Resultado("KNN", avaliacao.toMatrixString("Algorítmo KNN - Matriz de Confusão"), avaliacao.toClassDetailsString("kNN"));
@@ -105,7 +105,7 @@ public class Classificador {
                 NaiveBayes naive = new NaiveBayes();
                 naive.buildClassifier(baseTeste);
                 avaliacao.crossValidateModel(naive, baseTeste, (plano.eHoldOut) ? 4 : baseTeste.numInstances(), rand);
-                Resultado resultado = new Resultado("Algorítmo Naive Bayes", avaliacao.toMatrixString("Algorítmo NaiveBayes - Matriz de Confusão"), avaliacao.toClassDetailsString("kNN"));
+                Resultado resultado = new Resultado("Naive", avaliacao.toMatrixString("Algorítmo NaiveBayes - Matriz de Confusão"), avaliacao.toClassDetailsString("kNN"));
                 resultado.setTaxaErro(avaliacao.errorRate());
                 resultado.setTaxaAcerto(1 - avaliacao.errorRate());
                 resultado.setRevocacao(recallToDouble(avaliacao, baseTeste));
@@ -170,5 +170,14 @@ public class Classificador {
         return resultadoDbl / base.numClasses();
     }
     
-
+    public static Resultado getVencedor(ArrayList<Resultado> resultados){
+        Resultado maior = new Resultado("Nenhum" ,0.00);
+        for (Resultado resultado : resultados) {
+            if(((resultado.precisao + resultado.taxaAcerto + resultado.revocacao) / 3) > maior.pontuacao){
+                resultado.setPontuacao(((resultado.precisao + resultado.taxaAcerto + resultado.revocacao) / 3));
+                maior = resultado;
+            }
+        }
+        return maior;
+    }
 }
