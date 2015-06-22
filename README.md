@@ -74,5 +74,5 @@ Avaliador
 (¹) É necessário ter pelo menos o JDK 7  ou OpenJDK 6
 
 <hr>
-<a class="btn btn-default" href="http://mtcsapp.megari.com.br/" target="_blank">Participe deste projeto!</a>
+<a class="btn btn-default" href="https://drive.google.com/drive/folders/0B4rPJDhCXbQ7fkVDOWZpOVNCcEM0cjRVUWxhTmhJV1FxRzQxb0NLNGkteEh1X3ZCV0JpTTA" target="_blank">Nosso Drive</a>
 
