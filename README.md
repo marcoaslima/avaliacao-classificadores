@@ -5,7 +5,7 @@
 <p>Nota: Por motivos de desenvolvimento, distribuição e facilitação ao usuário as aplicações foram unificadas. Tornando assim flexível e adaptativa as bases fornecidas.</p>
 
 <p>Linguagem utilizada: Java (1.8)</p>
-<p>Bibliotecas utilizadas: Wekka (1.6), JTattoo (1.6)</p> 
+<p>Bibliotecas utilizadas: Wekka (1.6), JTattoo (1.6) e JFreeChart (1.0.1)</p> 
 
 Os algorítmos escolhidos
  <ul>
@@ -66,8 +66,8 @@ Avaliador
   </ul>
 <p>Relatórios</p>
 <ul>
-  <li><a href="http://mtcsapp.megari.com.br/docs/reports/automoveis.pdf" target="_blank">Nominal(.arff)</a></li>
-  <li><a href="http://mtcsapp.megari.com.br/docs/reports/smartphones.pdf" target="_blank">Contínua(.arff)</a></li>
+  <li>Nominal(.arff):<a href="http://mtcsapp.megari.com.br/docs/reports/automoveis.pdf" target="_blank">Download</a></li>
+  <li>Contínua(.arff):<a href="http://mtcsapp.megari.com.br/docs/reports/smartphones.pdf" target="_blank">Download</a></li>
 </ul>
 
 <h3>Observações:</h3>
