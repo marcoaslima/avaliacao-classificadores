@@ -5,10 +5,21 @@
 <p>Nota: Por motivos de desenvolvimento, distribuição e facilitação ao usuário as aplicações foram unificadas. Tornando assim flexível e adaptativa as bases fornecidas.</p>
 
 <p>Linguagem utilizada: Java (1.8)</p>
-<p>Bibliotecas utilizadas: Wekka (1.6), JTattoo (1.6) e JFreeChart (1.0.1)</p> 
-<p>Ferramentas utilizadas: NetBeans IDE (8.0), Visual Studio Code (0.1.0) e GIMP (2.8.14)</p>
+<p>Bibliotecas utilizadas:</p>
+<ul>
+<li>Wekka (1.6)</li> 
+<li>JTattoo (1.6) </li>
+<li>JFreeChart (1.0.1)</li> 
+<li>JCommom (1.0.23)</li>
+</ul>
+<p>Ferramentas utilizadas:<p> 
+<ul>
+<li>NetBeans IDE (8.0)</li>
+<li>Visual Studio Code (0.1.0)</li>
+<li>GIMP (2.8.14)</li>
+</ul>
 
-Os algorítmos escolhidos
+<p>Os algorítmos escolhidos<p>
  <ul>
   <li>J48 : Árvore de Decisão (Versão R) - dados nominais e contínuos (C4.5)</li>
   <li>KNN : k-Vizinhos mais próximos - dados contínuos</li>
@@ -16,7 +27,7 @@ Os algorítmos escolhidos
   <li>ID3 : Árvore de Decisão (Versão Tradicional) - dados nominais</li>
   <li>NaiveBayes : NaiveBayes - dados nominais e contínuos (Gaussian)</li>
  </ul>
-Avaliador
+<p>Avaliador</p>
   <ul>
    <li>Evaluation</li>
   </ul>
