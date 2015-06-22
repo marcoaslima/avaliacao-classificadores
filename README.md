@@ -71,8 +71,8 @@ Avaliador
 </ul>
 
 <h3>Observações:</h3>
-(¹) É necessário ter pelo menos o JDK 7  ou OpenJDK 6
-(²) Formato suportado apenas pelas versões 0.8.2 ou superior do MTCS
+<p>(¹) É necessário ter pelo menos o JDK 7  ou OpenJDK 6</p>
+<p>(²) Formato suportado apenas pelas versões 0.8.2 ou superior do MTCS</p>
 <hr>
 <a class="btn btn-default" href="https://drive.google.com/folderview?id=0B4rPJDhCXbQ7fkVDOWZpOVNCcEM0cjRVUWxhTmhJV1FxRzQxb0NLNGkteEh1X3ZCV0JpTTA&usp=sharing" target="_blank">Nosso Drive</a>
 
