@@ -9,11 +9,11 @@
 
 Os algorítmos escolhidos
  <ul>
-  <li>J48 : Árvore de Decisão (Versão R) - dados nominais</li>
+  <li>J48 : Árvore de Decisão (Versão R) - dados nominais e contínuos (C4.5)</li>
   <li>KNN : k-Vizinhos mais próximos - dados contínuos</li>
   <li>IB1 : Vizinho mais próximo - dados contínuos</li>
   <li>ID3 : Árvore de Decisão (Versão Tradicional) - dados nominais</li>
-  <li>NaiveBayes : NaiveBayes - dados nominais</li>
+  <li>NaiveBayes : NaiveBayes - dados nominais e contínuos (Gaussian)</li>
  </ul>
 Avaliador
   <ul>
