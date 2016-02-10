@@ -43,7 +43,7 @@
 
 <h3>Instalação:</h3>
  <ul>
-  <li><a href="http://mtcsapp.megari.com.br/latest/mtcs-latest.zip">Baixe o .zip aqui</a></li>
+  <li><a href="http://www.megari.com.br/delivery/software/mtcs/v0.1/mtcs-0.1a.zip">Baixe o .zip aqui</a></li>
   <li>Descompacte</li>
   <li>Execute <i>mtcs.jar¹</i></li>
  </ul>
@@ -72,14 +72,14 @@
 <h3>Documentos da Avaliação:</h3>
 <p>Base de dados:
   <ul>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/automoveis.arff" target="_blank">Nominal(.arff)</a></li>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/smartphones.arff" target="_blank">Contínua(.arff)</a></li>
-  <li><a href="http://mtcsapp.megari.com.br/docs/test/base-latest.mtcs" target="_blank">Todas(.mtcs)²</a> </p></li>
+  <li><a href="http://www.megari.com.br/delivery/software/mtcs/samples/automoveis.arff" target="_blank">Nominal(.arff)</a></li>
+  <li><a href="http://www.megari.com.br/delivery/software/mtcs/samples/smartphones.arff" target="_blank">Contínua(.arff)</a></li>
+  <li><a href="http://www.megari.com.br/delivery/software/mtcs/samples/base-latest.mtcs" target="_blank">Todas(.mtcs)²</a> </p></li>
   </ul>
 <p>Relatórios</p>
 <ul>
-  <li>Nominal(.arff):<a href="http://mtcsapp.megari.com.br/docs/reports/automoveis.pdf" target="_blank">Download</a></li>
-  <li>Contínua(.arff):<a href="http://mtcsapp.megari.com.br/docs/reports/smartphones.pdf" target="_blank">Download</a></li>
+  <li>Nominal(.arff):<a href="http://www.megari.com.br/delivery/software/mtcs/docs/automoveis.pdf" target="_blank">Download</a></li>
+  <li>Contínua(.arff):<a href="http://www.megari.com.br/delivery/software/mtcs/docs/smartphones.pdf" target="_blank">Download</a></li>
 </ul>
 
 <h3>Observações:</h3>
