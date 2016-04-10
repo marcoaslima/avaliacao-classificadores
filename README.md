@@ -36,10 +36,10 @@
 
 * Nome: MTCS (UE)
 * Versão: 0.8
-* Site: <a href="http://www.megari.com.br/solucoes/ver?id=4">megari.com.br/</a>
+* Site: <a href="http://www.megari.com.br/solucoes/mtcs">megari.com.br/</a>
 * Suporte: <a href="mailto:contato@megari.com.br">contato@megari.com.br</a>
 * Licensa: <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL V3</a>
-* Documentação: <a href="http://mtcsapp.megari.com.br/docs/jdoc/" target="_blank"> clique aqui
+* Documentação: <a href="http://www.megari.com.br/solucoes/mtcs/docs" target="_blank"> clique aqui
 
 <h3>Instalação:</h3>
  <ul>
