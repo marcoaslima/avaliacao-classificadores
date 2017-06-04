@@ -4,6 +4,11 @@
 
 <p>Nota: Por motivos de desenvolvimento, distribuição e facilitação ao usuário as aplicações foram unificadas. Tornando assim flexível e adaptativa as bases fornecidas.</p>
 
+### Tela
+
+![App screenshots](https://c1.staticflickr.com/5/4210/34257653574_ccdbe25855_b.jpg)
+
+
 <p>Linguagem utilizada: Java (1.8)</p>
 <p>Bibliotecas utilizadas:</p>
 <ul>
@@ -31,15 +36,6 @@
   <ul>
    <li>Evaluation</li>
   </ul>
-  
-#Sobre o sistema
-
-* Nome: MTCS (UE)
-* Versão: 0.8
-* Site: <a href="http://www.megari.com.br/solucoes/mtcs">megari.com.br/</a>
-* Suporte: <a href="mailto:contato@megari.com.br">contato@megari.com.br</a>
-* Licensa: <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL V3</a>
-* Documentação: <a href="http://www.megari.com.br/solucoes/mtcs/docs" target="_blank"> clique aqui
 
 <h3>Instalação:</h3>
  <ul>
@@ -59,7 +55,7 @@
 
 <h3>Desenvolvedores:</h3>
 <p>Nome: <a href="https://github.com/marckdx" target="_blank">Marco Aurélio Lima</a></p>
-<p>Nome: <a href="https://github.com/renanps" target="_blank">Renan Paulino Sanchez</a></p>
+<p>Nome: <a href="#" target="_blank">Renan Paulino Sanchez</a></p>
 
 <h3>Sponsor:</h3>
 <p>Nome:<a href="http://www.villani.eti.br" target="_blank">Prof Ms Leonardo Villani</a></p>
@@ -67,19 +63,19 @@
 
 <h3>Colaboração:</h3>
 <p>Nome:<a href="https://github.com/valmirsl" target="_blank">Valmir Santos da Silva</a></p>
-<p>Nome:<a href="" target="_blank">Stevan Mosquetti</a></p>
+<p>Nome:<a href="#" target="_blank">Stevan Mosquetti</a></p>
 
 <h3>Documentos da Avaliação:</h3>
 <p>Base de dados:
   <ul>
-  <li><a href="http://www.megari.com.br/delivery/software/mtcs/samples/automoveis.arff" target="_blank">Nominal(.arff)</a></li>
-  <li><a href="http://www.megari.com.br/delivery/software/mtcs/samples/smartphones.arff" target="_blank">Contínua(.arff)</a></li>
-  <li><a href="http://www.megari.com.br/delivery/software/mtcs/samples/base-latest.mtcs" target="_blank">Todas(.mtcs)²</a> </p></li>
+  <li><a href="https://drive.google.com/file/d/0B4rPJDhCXbQ7d2ZWVFNDMGY0Y3c/view?usp=sharing" target="_blank">Nominal(.arff)</a></li>
+  <li><a href="https://drive.google.com/file/d/0B4rPJDhCXbQ7ekx5d3FvU1hBNWc/view?usp=sharing" target="_blank">Contínua(.arff)</a></li>
   </ul>
+  </p>
 <p>Relatórios</p>
 <ul>
-  <li>Nominal(.arff):<a href="http://www.megari.com.br/delivery/software/mtcs/docs/automoveis.pdf" target="_blank">Download</a></li>
-  <li>Contínua(.arff):<a href="http://www.megari.com.br/delivery/software/mtcs/docs/smartphones.pdf" target="_blank">Download</a></li>
+  <li>Nominal(.arff):<a href="https://drive.google.com/file/d/0B4rPJDhCXbQ7aXZ3TGRVRHFiSkk/view?usp=sharing" target="_blank">Download</a></li>
+  <li>Contínua(.arff):<a href="https://drive.google.com/file/d/0B4rPJDhCXbQ7Sng5X2xuU1QtSG8/view?usp=sharing" target="_blank">Download</a></li>
 </ul>
 
 <h3>Observações:</h3>
